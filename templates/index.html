@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analysis</title>
+
+    <!-- Loads the path to your static files -->
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy">
+    <link rel="stylesheet" type="text/css" href="{% static 'sentimentanalysis/CSS/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'sentimentanalysis/CSS/style.css' %}"/>
+
+    <script src="{% static 'sentimentanalysis/Scripts/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'sentimentanalysis/Scripts/bootstrap.min.js' %}"></script>
+    <script src="{% static 'sentimentanalysis/Scripts/SentimentAnalysisUtils.js' %}"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="{% url 'sentimentanalysis:index' %}">Sentiment Analysis</a>
+        </div>
+    </div>
+</nav>
+
+
+<div style="padding: 20px;">
+    <div class="form-group">
+        <label>Enter Text</label>
+        <textarea class="form-control rounded-0" id="textarea" rows="10" required></textarea>
+    </div>
+    <button type="button" class="btn btn-default" onclick="SA.getSentiment()">Check Sentiment</button>
+</div>
+
+{% block body %}
+{% endblock %}
+
+
+</body>
+</html>
