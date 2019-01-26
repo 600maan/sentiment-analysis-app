@@ -1,4 +1,4 @@
-# SAApp
+# SentimentAnalysis App
 A Django web application for sentiment analysis
 
 Copy pickled_algos inside the sentiment-analysis-app folder
