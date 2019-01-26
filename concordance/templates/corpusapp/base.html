@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Corpus{% endblock %}</title>
+
+    <!-- Loads the path to your static files -->
+    {% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy">
+    <link rel="stylesheet" type="text/css" href="{% static 'corpusapp/CSS/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'corpusapp/CSS/style.css' %}"/>
+
+    <script src="{% static 'corpusapp/Scripts/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'corpusapp/Scripts/bootstrap.min.js' %}"></script>
+    <script src="{% static 'corpusapp/Scripts/Utils.js' %}"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="{% url 'corpusapp:index' %}">Corpus App</a>
+        </div>
+
+        <!-- Items -->
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <div class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input id="search_word" type="text" class="form-control" name="q" value="">
+                </div>
+                <button type="button" class="btn btn-default" onclick="corpus.getConcordance()">Display Concordance</button>
+                <button type="button" class="btn btn-default" onclick="corpus.getFrequency()">Display Frequency</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+{% block body %}
+{% endblock %}
+
+
+</body>
+</html>

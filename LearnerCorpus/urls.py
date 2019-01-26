@@ -19,15 +19,20 @@ from django.conf.urls import url
 from django.conf.urls.static import static
 from django.conf import settings
 from rest_framework.urlpatterns import format_suffix_patterns
+from concordance import views
 from sentimentanalysis import SAviews
 
 urlpatterns = [
-     url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
+    url(r'^corpus/index', include('concordance.urls')),
     url(r'^sentimentanalysis/index', include('sentimentanalysis.urls')),
     url(r'^sentimentanalysis/getSentiment', SAviews.SentimentAnalysis.as_view()),
+    url(r'^viewConcordance/', views.ConcordanceList.as_view()),
+    url(r'^viewFrequency/', views.FrequencyList.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_URL)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_URL)

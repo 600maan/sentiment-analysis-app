@@ -1,0 +1,9 @@
+wordnet
+pros_cons
+reuters
+gutenberg
+genesis
+inaugural
+nps_chat
+webtext
+treebank
