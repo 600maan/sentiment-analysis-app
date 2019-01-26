@@ -3,7 +3,6 @@
 *.log
 *.idea
 local_settings.py
-db.sqlite3
 *pyc
 pickled_algos
 venv
