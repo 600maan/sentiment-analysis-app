@@ -5,7 +5,6 @@ django-cors-headers==2.4.0
 djangorestframework==3.8.2
 docopt==0.6.2
 idna==2.7
-nltk==3.3
 pipenv==2018.7.1
 pipreqs==0.4.9
 pytz==2018.5
