@@ -19,13 +19,13 @@ from django.conf.urls import url
 from django.conf.urls.static import static
 from django.conf import settings
 from rest_framework.urlpatterns import format_suffix_patterns
-from concordance import views
-from sentimentanalysis import SAviews
+from sentimentanalysis import views
+from sentimentanalysis import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^sentimentanalysis/index', include('sentimentanalysis.urls')),
-    url(r'^sentimentanalysis/getSentiment', SAviews.SentimentAnalysis.as_view()),
+    url(r'^sentimentanalysis/getSentiment', views.SentimentAnalysis.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

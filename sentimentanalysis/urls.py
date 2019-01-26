@@ -1,10 +1,10 @@
 
 
 from django.conf.urls import url
-from . import SAviews
+from . import views
 
 app_name = 'sentimentanalysis'
 
 urlpatterns = [
-    url(r'^$', SAviews.IndexView.as_view(), name="index"),
+    url(r'^$', views.IndexView.as_view(), name="index"),
 ]
