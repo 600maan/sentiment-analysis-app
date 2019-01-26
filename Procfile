@@ -1,1 +1,1 @@
-web: gunicorn LearnerCorpus.wsgi
+web: gunicorn SA.wsgi

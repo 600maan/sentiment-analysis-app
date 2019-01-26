@@ -9,7 +9,7 @@ from rest_framework.response import Response
 # from nltk.corpus import *
 from nltk.text import Text
 from django.views import generic
-from LearnerCorpus.settings import CORPUS_ROOT
+from SA.settings import CORPUS_ROOT
 from nltk import FreqDist
 # from django.http import JsonResponse
 
