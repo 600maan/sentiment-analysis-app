@@ -1,7 +1,7 @@
 // Local machine
-var baseURL = "http://localhost:80/";
+//var baseURL = "http://localhost:80/";
 // Production machine
-//var baseURL = "http://142.93.188.20:8000/";
+var baseURL = "http://13.229.119.8:80/";
 
 var SA = {
     getSentiment: function () {
