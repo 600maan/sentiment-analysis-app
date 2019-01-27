@@ -8,5 +8,6 @@ sudo apt install -y python3-pip
 sudo pip3 install -r requirements.txt --user 
  
 echo "Start Python Application"
+sudo python3 -m nltk.downloader all
 sudo python3 manage.py runserver 0.0.0.0:80
  
