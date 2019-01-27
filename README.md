@@ -11,4 +11,5 @@ chmod +x runme.sh
 
 Known Issues : Need to disable these
 1) Ridge_Classifier
-2)kNN_Classifier
+2) Perceptron_Classifier
+3) kNN_Classifier
