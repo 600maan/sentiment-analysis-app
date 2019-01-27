@@ -9,3 +9,6 @@ chmod +x runme.sh
 
 ./runme.sh
 
+Known Issues : Need to disable these
+1) Ridge_Classifier
+2)kNN_Classifier
